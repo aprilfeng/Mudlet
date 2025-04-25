@@ -2713,3 +2713,25 @@ int TLuaInterpreter::closeProfile(lua_State* L)
     }
     return 0;
 }
+
+
+TLuaInterpreter::appendCmdLine(lua_State* L) {
+    commandLine->adjustHeight();
+    auto cursor = commandLine->textCursor();
+    cursor.movePosition(QTextCursor::End);
+    commandLine->setTextCursor(cursor);
+}
+
+TLuaInterpreter::printCmdLine(lua_State* L) {
+    commandLine->adjustHeight();
+    auto cursor = commandLine->textCursor();
+    cursor.movePosition(QTextCursor::End);
+    commandLine->setTextCursor(cursor);
+}
+
+TLuaInterpreter::clearCmdLine(lua_State* L) {
+    commandLine->adjustHeight();
+    auto cursor = commandLine->textCursor();
+    cursor.movePosition(QTextCursor::End);
+    commandLine->setTextCursor(cursor);
+}
